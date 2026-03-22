@@ -1,0 +1,119 @@
+<svg width="100%" viewBox="0 0 680 200" xmlns="http://www.w3.org/2000/svg">
+<style>
+  .star { fill: white; opacity: 0.7; }
+  @keyframes twinkle { 0%,100%{opacity:0.3} 50%{opacity:1} }
+  @keyframes rocketmove { 0%{transform:translateX(0px)} 25%{transform:translateX(40px)} 75%{transform:translateX(-40px)} 100%{transform:translateX(0px)} }
+  @keyframes bulletmove { 0%{transform:translateY(0px);opacity:1} 100%{transform:translateY(-120px);opacity:0} }
+  @keyframes ufomove1 { 0%{transform:translateX(0px)} 50%{transform:translateX(80px)} 100%{transform:translateX(0px)} }
+  @keyframes ufomove2 { 0%{transform:translateX(0px)} 50%{transform:translateX(-60px)} 100%{transform:translateX(0px)} }
+  @keyframes explode { 0%,80%{opacity:0;transform:scale(0)} 85%{opacity:1;transform:scale(1.4)} 100%{opacity:0;transform:scale(0)} }
+  @keyframes thruster { 0%,100%{transform:scaleY(1)} 50%{transform:scaleY(1.5)} }
+  .rocket-group { animation: rocketmove 6s ease-in-out infinite; transform-origin: 340px 150px; }
+  .bullet1 { animation: bulletmove 1.2s linear infinite; transform-origin: 340px 130px; }
+  .bullet2 { animation: bulletmove 1.2s linear 0.4s infinite; transform-origin: 340px 130px; }
+  .bullet3 { animation: bulletmove 1.2s linear 0.8s infinite; transform-origin: 340px 130px; }
+  .ufo1 { animation: ufomove1 4s ease-in-out infinite; transform-origin: 180px 60px; }
+  .ufo2 { animation: ufomove2 5s ease-in-out 1s infinite; transform-origin: 460px 40px; }
+  .ufo3 { animation: ufomove1 3.5s ease-in-out 0.5s infinite; transform-origin: 560px 70px; }
+  .explode1 { animation: explode 2s ease-out 0.8s infinite; transform-origin: 220px 55px; }
+  .thruster-flame { animation: thruster 0.3s ease-in-out infinite; transform-origin: 340px 175px; }
+  .s1{animation:twinkle 2s infinite} .s2{animation:twinkle 3s infinite 0.5s} .s3{animation:twinkle 2.5s infinite 1s} .s4{animation:twinkle 1.8s infinite 0.3s} .s5{animation:twinkle 3.2s infinite 0.8s}
+  .title-text { fill: white; font-family: monospace; font-size: 28px; font-weight: bold; letter-spacing: 4px; }
+  .subtitle-text { fill: #aaddff; font-family: monospace; font-size: 11px; letter-spacing: 2px; }
+</style>
+
+<rect width="680" height="200" fill="#050a1a"/>
+
+<!-- Stars -->
+<circle class="star s1" cx="30" cy="20" r="1.2"/>
+<circle class="star s2" cx="90" cy="45" r="1"/>
+<circle class="star s3" cx="150" cy="15" r="1.5"/>
+<circle class="star s4" cx="220" cy="35" r="1"/>
+<circle class="star s5" cx="300" cy="10" r="1.2"/>
+<circle class="star s1" cx="380" cy="30" r="1"/>
+<circle class="star s2" cx="450" cy="18" r="1.5"/>
+<circle class="star s3" cx="520" cy="40" r="1"/>
+<circle class="star s4" cx="600" cy="12" r="1.2"/>
+<circle class="star s5" cx="650" cy="35" r="1"/>
+<circle class="star s1" cx="60" cy="80" r="1"/>
+<circle class="star s2" cx="130" cy="95" r="1.2"/>
+<circle class="star s3" cx="490" cy="85" r="1"/>
+<circle class="star s4" cx="570" cy="100" r="1.5"/>
+<circle class="star s5" cx="640" cy="75" r="1"/>
+
+<!-- UFO 1 -->
+<g class="ufo1">
+  <ellipse cx="180" cy="62" rx="28" ry="10" fill="#44aaff" opacity="0.9"/>
+  <ellipse cx="180" cy="58" rx="16" ry="9" fill="#88ccff"/>
+  <ellipse cx="180" cy="56" rx="9" ry="6" fill="#cceeff" opacity="0.8"/>
+  <ellipse cx="180" cy="64" rx="28" ry="4" fill="#2277cc" opacity="0.6"/>
+  <circle cx="168" cy="65" r="2" fill="#00ffaa" opacity="0.9"/>
+  <circle cx="180" cy="67" r="2" fill="#ffaa00" opacity="0.9"/>
+  <circle cx="192" cy="65" r="2" fill="#00ffaa" opacity="0.9"/>
+</g>
+
+<!-- UFO 2 -->
+<g class="ufo2">
+  <ellipse cx="460" cy="42" rx="24" ry="9" fill="#ff6644" opacity="0.9"/>
+  <ellipse cx="460" cy="38" rx="14" ry="8" fill="#ffaa88"/>
+  <ellipse cx="460" cy="36" rx="8" ry="5" fill="#ffeedd" opacity="0.8"/>
+  <ellipse cx="460" cy="44" rx="24" ry="3.5" fill="#cc3311" opacity="0.6"/>
+  <circle cx="450" cy="45" r="1.8" fill="#ffff00" opacity="0.9"/>
+  <circle cx="460" cy="47" r="1.8" fill="#ff4400" opacity="0.9"/>
+  <circle cx="470" cy="45" r="1.8" fill="#ffff00" opacity="0.9"/>
+</g>
+
+<!-- UFO 3 -->
+<g class="ufo3">
+  <ellipse cx="560" cy="72" rx="22" ry="8" fill="#aa44ff" opacity="0.9"/>
+  <ellipse cx="560" cy="68" rx="13" ry="7" fill="#cc88ff"/>
+  <ellipse cx="560" cy="66" rx="7" ry="5" fill="#eeddff" opacity="0.8"/>
+  <ellipse cx="560" cy="74" rx="22" ry="3" fill="#7711cc" opacity="0.6"/>
+  <circle cx="551" cy="75" r="1.8" fill="#ff00ff" opacity="0.9"/>
+  <circle cx="560" cy="77" r="1.8" fill="#00ffff" opacity="0.9"/>
+  <circle cx="569" cy="75" r="1.8" fill="#ff00ff" opacity="0.9"/>
+</g>
+
+<!-- Explosion -->
+<g class="explode1">
+  <circle cx="220" cy="55" r="18" fill="#ffaa00" opacity="0.8"/>
+  <circle cx="220" cy="55" r="10" fill="#ffffff" opacity="0.9"/>
+  <line x1="205" y1="40" x2="200" y2="30" stroke="#ff6600" stroke-width="2"/>
+  <line x1="235" y1="40" x2="240" y2="30" stroke="#ff6600" stroke-width="2"/>
+  <line x1="220" y1="37" x2="220" y2="25" stroke="#ffdd00" stroke-width="2"/>
+  <line x1="207" y1="55" x2="195" y2="55" stroke="#ff4400" stroke-width="2"/>
+  <line x1="233" y1="55" x2="245" y2="55" stroke="#ff4400" stroke-width="2"/>
+</g>
+
+<!-- Bullets -->
+<g class="bullet1">
+  <rect x="337" y="125" width="6" height="14" rx="3" fill="#00ffff" opacity="0.95"/>
+  <rect x="338" y="123" width="4" height="6" rx="2" fill="white" opacity="0.8"/>
+</g>
+<g class="bullet2">
+  <rect x="337" y="125" width="6" height="14" rx="3" fill="#00ffff" opacity="0.95"/>
+  <rect x="338" y="123" width="4" height="6" rx="2" fill="white" opacity="0.8"/>
+</g>
+<g class="bullet3">
+  <rect x="337" y="125" width="6" height="14" rx="3" fill="#00ffff" opacity="0.95"/>
+  <rect x="338" y="123" width="4" height="6" rx="2" fill="white" opacity="0.8"/>
+</g>
+
+<!-- Rocket -->
+<g class="rocket-group">
+  <g class="thruster-flame">
+    <ellipse cx="340" cy="178" rx="7" ry="12" fill="#ff6600" opacity="0.9"/>
+    <ellipse cx="340" cy="176" rx="4" ry="7" fill="#ffdd00" opacity="0.9"/>
+  </g>
+  <rect x="328" y="140" width="24" height="36" rx="4" fill="#ddddff"/>
+  <polygon points="340,118 328,142 352,142" fill="#ff4444"/>
+  <circle cx="340" cy="148" r="5" fill="#88ccff" opacity="0.9"/>
+  <circle cx="340" cy="148" r="3" fill="#cceeff"/>
+  <polygon points="328,165 316,178 328,172" fill="#aaaadd"/>
+  <polygon points="352,165 364,178 352,172" fill="#aaaadd"/>
+</g>
+
+<!-- Title -->
+<text x="340" y="108" text-anchor="middle" class="title-text">SPACE SHOOTER</text>
+<text x="340" y="122" text-anchor="middle" class="subtitle-text">← → to move  |  SPACE to shoot</text>
+</svg>
